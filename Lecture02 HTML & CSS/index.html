@@ -14,44 +14,44 @@
         <fieldset>
             <legend>Your basic info</legend>
             <label for="firstname">First Name:</label>
-            <input class="input-text" type="text" id="firstname">
+            <input class="input-text" type="text" id="firstname" name="firstname">
             <label for="lastname">Last Name:</label>
-            <input class="input-text" type="text" id="lastname">
+            <input class="input-text" type="text" id="lastname" name="lastname">
             <label for="email">Email:</label>
-            <input class="input-text" type="email" id="email">
+            <input class="input-text" type="email" id="email" name="email">
             <label for="username">Username:</label>
-            <input class="input-text" type="text" id="username">
+            <input class="input-text" type="text" id="username" name="username">
             <label for="password">Password:</label>
-            <input class="input-text" type="password" id="password">
+            <input class="input-text" type="password" id="password" name="password">
         </fieldset>
         <fieldset>
             <legend>Other details</legend>
             <label for="dob">Birth Date:</label>
-            <input class="input-text" type="date" id="dob">
+            <input class="input-text" type="date" id="dob" name="dob">
             <label>Gender:</label>
             <div>
                 <label>
-                    <input type="radio" name="sex">
+                    <input type="radio" id="male" name="gender" value="male">
                 </label>
-                <label>Male</label>
+                <label for="male">Male</label>
             </div>
             <div>
                 <label>
-                    <input type="radio" name="sex">
+                    <input type="radio" id="female" name="gender" value="female">
                 </label>
-                <label>Female</label>
+                <label for="female">Female</label>
             </div>
             <div>
                 <label>
-                    <input type="radio" name="sex">
+                    <input type="radio" id="other" name="gender" value="other">
                 </label>
-                <label>Other</label>
+                <label for="other">Other</label>
             </div>
         </fieldset>
         <fieldset>
-            <label>Country</label>
+            <label for="country">Country</label>
             <label>
-                <select name="country">
+                <select id="country" name="country">
                     <option value="CN">China</option>
                     <option value="US">United States</option>
                     <option value="UK">United Kingdom</option>
@@ -62,7 +62,7 @@
         <fieldset>
             <div>
                 <label>
-                    <input id="terms" type="checkbox" required>
+                    <input id="terms" type="checkbox" required value="test">
                 </label>
                 <label for="terms">I'm accepting Terms and Conditions</label>
             </div>
