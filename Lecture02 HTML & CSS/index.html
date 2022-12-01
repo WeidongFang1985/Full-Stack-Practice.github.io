@@ -9,8 +9,65 @@
     <meta name="description" content="">
 </head>
 <body>
-    <main>
+    <form method="post" action="mailto:info@example.com">
         <h1>Sign Up</h1>
-    </main>
+        <fieldset>
+            <legend>Your basic info</legend>
+            <label for="firstname">First Name:</label>
+            <input class="input-text" type="text" id="firstname">
+            <label for="lastname">Last Name:</label>
+            <input class="input-text" type="text" id="lastname">
+            <label for="email">Email:</label>
+            <input class="input-text" type="email" id="email">
+            <label for="username">Username:</label>
+            <input class="input-text" type="text" id="username">
+            <label for="password">Password:</label>
+            <input class="input-text" type="password" id="password">
+        </fieldset>
+        <fieldset id="other-details">
+            <legend>Other details</legend>
+            <label for="dob">Birth Date:</label>
+            <input class="input-text" type="date" id="dob">
+            <label>Gender:</label>
+            <div>
+                <label>
+                    <input type="radio" name="sex">
+                </label>
+                <label>Male</label>
+            </div>
+            <div>
+                <label>
+                    <input type="radio" name="sex">
+                </label>
+                <label>Female</label>
+            </div>
+            <div>
+                <label>
+                    <input type="radio" name="sex">
+                </label>
+                <label>Other</label>
+            </div>
+        </fieldset>
+        <fieldset id="country">
+            <label>Country</label>
+            <label>
+                <select name="country">
+                    <option value="CN">China</option>
+                    <option value="US">United States</option>
+                    <option value="UK">United Kingdom</option>
+                    <option value="TK">Turkey</option>
+                </select>
+            </label>
+        </fieldset>
+        <fieldset id="register">
+            <div>
+                <label>
+                    <input id="terms" type="checkbox" required>
+                </label>
+                <label for="terms">I'm accepting Terms and Conditions</label>
+            </div>
+            <button type="submit">Sign Up</button>
+        </fieldset>
+    </form>
 </body>
 </html>
