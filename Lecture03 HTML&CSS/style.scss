@@ -1,0 +1,69 @@
+$colors : ("main":#8df8db,"secondary":#6480e7,"third":#5e41b1);
+
+.paddingStyle {
+  padding:{
+    left:40px;
+    right: 40px;
+  }
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+  @extend .paddingStyle;
+}
+
+.box {
+  display: flex;
+  gap: 50px;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  @extend .paddingStyle;
+}
+
+.boxItem {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  max-width: 300px;
+  padding: 30px;
+  background-color: map-get($colors,main);
+  color: white;
+  position: relative;
+}
+
+.boxItem-title {
+  font-size: 18px;
+  font-weight: normal;
+}
+
+.boxItem-subscribe {
+  text-decoration: none;
+  color: white;
+  position: absolute;
+  right: 20px;
+  bottom: 26px;
+  background-color: #384047;
+  width: 80px;
+  padding: {
+    top:5px;
+    bottom: 5px;
+  };
+  font-size: 14px;
+  text-align: center;
+  border-radius: 20px;
+}
+
+.boxItem:nth-child(2) {
+  background-color: map-get($colors,secondary);
+}
+
+.boxItem:nth-child(3) {
+  background-color: map-get($colors,main);
+}
+
+.boxItem:nth-child(4) {
+  background-color: map-get($colors,third);
+}

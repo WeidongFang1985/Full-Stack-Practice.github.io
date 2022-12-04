@@ -1,0 +1,63 @@
+.paddingStyle, .box, main {
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.box {
+  display: flex;
+  gap: 50px;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+}
+
+.boxItem {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  max-width: 300px;
+  padding: 30px;
+  background-color: #8df8db;
+  color: white;
+  position: relative;
+}
+
+.boxItem-title {
+  font-size: 18px;
+  font-weight: normal;
+}
+
+.boxItem-subscribe {
+  text-decoration: none;
+  color: white;
+  position: absolute;
+  right: 20px;
+  bottom: 26px;
+  background-color: #384047;
+  width: 80px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  font-size: 14px;
+  text-align: center;
+  border-radius: 20px;
+}
+
+.boxItem:nth-child(2) {
+  background-color: #6480e7;
+}
+
+.boxItem:nth-child(3) {
+  background-color: #8df8db;
+}
+
+.boxItem:nth-child(4) {
+  background-color: #5e41b1;
+}
+
+/*# sourceMappingURL=style.css.map */
