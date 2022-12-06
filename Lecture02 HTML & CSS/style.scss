@@ -1,80 +1,75 @@
-$colors: (main:#f4f7f8,secondary:#e8eeef);
-
+$colors: (primary:#f4f7f8,secondary:#e8eeef);
 body {
-  display: flex;
-  justify-content: center;
-  font-family: "Nunito", sans-serif;
-  color: #384047;
-}
-
-h1 {
-  text-align: center;
-  font-size: 28px;
+  font-family: sans-serif;
 }
 
 form {
-  padding: 0 35px;
-  gap:10px;
-  align-items: center;
-  background-color: map-get($colors, main);
+  max-width: 580px;
+  margin: 10px auto;
+  background-color: map-get($colors,primary);
+  padding: 0 20px;
+  border-radius: 8px;
+  box-sizing: border-box;
   @media screen and (max-width: 580px) {
     width: 340px;
-    box-sizing: border-box;
   }
 }
 
-@mixin web-responsive-mobile {
-  @media screen and (max-width: 580px) {
-    width: 270px;
-  }
-}
-
-.input-text, select {
-  background-color: map-get($colors,secondary);
-  border: 0;
-  height: 50px;
-  margin-bottom: 30px;
-  width: 550px;
-  color: #8a98a0;
-  font-size: 16px;
-  border-radius: 5px;
-  outline: 0;
-  padding: 0 20px;
-  box-sizing: border-box;
-  @include web-responsive-mobile;
+form h1 {
+  text-align: center;
+  padding: {
+    top: 10px;
+    bottom: 20px;
+  };
 }
 
 fieldset {
-  border: 0;
-  padding: 10px 0;
+  border: none;
 }
 
 legend {
-  font-size: 22px;
+  font-size: 24px;
+  margin-bottom: 10px;
 }
 
 legend::before {
-  content: '';
+  content: "";
   width: 16px;
   height: 16px;
-  background-color: #007a5a;
-  border-radius: 8px;
-  margin-right: 20px;
+  background-color: green;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 15px;
 }
 
-form, fieldset {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 40px;
+.textInput, select, button{
+  margin-bottom: 30px;
+  width: 100%;
+  height: 50px;
+  border: none;
+  background-color: map-get($colors,secondary);
+  border-radius: 5px;
+}
+
+input[type="date"],select {
+  padding: 10px;
+  color: darkgray;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+select {
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: center right 12px;
+  background-size: 16px;
 }
 
 button {
-  width: 550px;
-  height: 40px;
   background-color: #4bc970;
-  color: white;
   font-size: 18px;
-  border: 0;
-  border-radius: 6px;
-  @include web-responsive-mobile
+  color: #fff;
+  height: 40px;
 }
+
