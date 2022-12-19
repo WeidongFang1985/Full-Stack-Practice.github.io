@@ -10,11 +10,15 @@
       //output ['Apple','Orange','Banana']
       let fruits = ["Apple", "Orange", "Banana"];
       let newFruitArray;
+      newFruitArray = [...fruits];
+      console.log(newFruitArray);
 
       // 2. Concatenating arrays
       //output ['A', 'B', 'C', 'X', 'Y', 'Z']
       let arr1 = ["A", "B", "C"];
       let arr2 = ["X", "Y", "Z"];
+      let arr3 = [...arr1, ...arr2];
+      console.log(arr3);
     </script>
   </head>
   <body></body>

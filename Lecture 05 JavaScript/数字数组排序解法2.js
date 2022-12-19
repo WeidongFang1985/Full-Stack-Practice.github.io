@@ -1,4 +1,4 @@
-const list = [2, -9, 12, 5, -22, 27, 4, 0, -15];
+const list = [2, -9, 12, 5, -22, -22,27, 4, 0, -15];
 const sortList = (array) => {
     const newArray = [];
     while (array.length > 0) {
