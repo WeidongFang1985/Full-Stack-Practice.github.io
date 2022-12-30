@@ -38,4 +38,4 @@ const personnel = [
 
 //get the total score of force users only
 console.log(personnel.filter((person) => person.isForceUser === true)
-    .reduce((score, current) => score += current.shootingScore + current.pilotingScore, 0));
+    .reduce((score, current) => score + current.shootingScore + current.pilotingScore, 0));
