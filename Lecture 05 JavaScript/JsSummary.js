@@ -69,6 +69,7 @@ console.log('------------------------------------');
 // 7. 剩余参数
 const fn = (...args) => console.log(args);
 fn(15, 23, 33);
+console.log('------------------------------------');
 
 // *8. function declaration vs function expression
 // function declaration:
@@ -78,3 +79,69 @@ fn(15, 23, 33);
 // function expression:
 // const fn = () = {};
 // 叫作匿名函数，调用只能在函数体后使用
+
+// *8. 浅拷贝 shallow copy 对象只能copy一层
+let obj = {
+    id: 1,
+    name1: "andy",
+    msg: {
+        age: 18,
+    },
+};
+// shallow copy有三种方法：
+// (1)Object.assign()
+let obj1 = Object.assign(obj);
+console.log(obj1);
+//或
+let obj2 = {};
+Object.assign(obj2, obj);
+console.log(obj2);
+
+
+obj2.msg.age = 20;
+console.log(obj);
+console.log(obj2);
+
+// (2)Array.from()
+let arr11 = ['lin', 'is', 'handsome'];
+let newArr11 = Array.from(arr11);
+console.log(newArr11);
+
+// (3) 展开运算符
+let newArr12 = [...arr11];
+console.log(newArr12);
+let obj3 = {...obj};
+console.log(obj3);
+console.log('------------------------------------');
+
+
+//浅拷贝的特点，不能解决嵌套，copy后如果值改变，会影响原始值。
+
+// *9. 深拷贝 deep copy
+// 第一种 JSON.parse(JSON.stringify(obj))
+// 但是有弊端，如果有undefined, symbol,function 就会出问题
+let obj01 = {
+    id: 1,
+    name1: "andy",
+    msg: {
+        age: 18,
+    },
+};
+let newObj01 = JSON.parse(JSON.stringify(obj01));
+console.log('newObj01:', newObj01);
+
+let strangeObj = {
+    a: undefined,
+    b: Symbol("b"),
+    c: function () {
+    }
+};
+let newStrangeObj = JSON.parse(JSON.stringify(strangeObj));
+console.log(newStrangeObj);
+console.log('------------------------------------');
+
+
+// 常用 第二种 lodash库 其中cloneDeep就能完美解决上面的问题
+// 第三种 structuredClone() 不推荐
+let newObj02 = structuredClone(obj01);
+console.log('newObj02:', newObj02);
