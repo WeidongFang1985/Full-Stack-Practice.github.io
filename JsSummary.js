@@ -80,7 +80,9 @@ console.log('------------------------------------');
 // const fn = () = {};
 // 叫作匿名函数，调用只能在函数体后使用
 
-// *8. 浅拷贝 shallow copy 对象只能copy一层
+// *8. 浅拷贝 shallow copy
+// 如何对象没有嵌套，则该对象叫plain object, 浅拷贝的操作其实就是深拷贝
+// 深拷贝时候，拷贝对象===对象 return false
 let obj = {
     id: 1,
     name1: "andy",
@@ -90,22 +92,20 @@ let obj = {
 };
 // shallow copy有三种方法：
 // (1)Object.assign()
-let obj1 = Object.assign(obj);
+let obj1 = {};
+Object.assign(obj1, obj);
 console.log(obj1);
-//或
-let obj2 = {};
-Object.assign(obj2, obj);
-console.log(obj2);
+console.log(obj1 === obj);
 
-
-obj2.msg.age = 20;
+obj1.msg.age = 20;
 console.log(obj);
-console.log(obj2);
+console.log(obj1);
 
 // (2)Array.from()
 let arr11 = ['lin', 'is', 'handsome'];
 let newArr11 = Array.from(arr11);
 console.log(newArr11);
+console.log(newArr11 === arr11)
 
 // (3) 展开运算符
 let newArr12 = [...arr11];
@@ -113,6 +113,7 @@ console.log(newArr12);
 let obj3 = {...obj};
 console.log(obj3);
 console.log('------------------------------------');
+console.log(newArr12 === arr11);
 
 
 //浅拷贝的特点，不能解决嵌套，copy后如果值改变，会影响原始值。
@@ -129,6 +130,7 @@ let obj01 = {
 };
 let newObj01 = JSON.parse(JSON.stringify(obj01));
 console.log('newObj01:', newObj01);
+console.log(obj01 === newObj01);
 
 let strangeObj = {
     a: undefined,
@@ -139,6 +141,7 @@ let strangeObj = {
 let newStrangeObj = JSON.parse(JSON.stringify(strangeObj));
 console.log(newStrangeObj);
 console.log('------------------------------------');
+console.log(strangeObj === newStrangeObj)
 
 
 // 常用 第二种 lodash库 其中cloneDeep就能完美解决上面的问题
