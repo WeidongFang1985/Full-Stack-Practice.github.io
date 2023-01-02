@@ -10,7 +10,7 @@ prev.disabled = true;
 next.addEventListener("click", () => {
     prev.disabled = false;
     currentActive++;
-    if (progressWidth < 99) {
+    if (currentActive <= circles.length) {
         progressWidth += 33.3;
     }
 
@@ -23,7 +23,6 @@ next.addEventListener("click", () => {
     progress.style.width = `${progressWidth}%`;
     update()
 
-
 })
 
 prev.addEventListener("click", () => {
@@ -32,10 +31,10 @@ prev.addEventListener("click", () => {
     if (currentActive < 1) {
         currentActive = 1
     }
-    if (progressWidth > 0) {
+    if (currentActive > 0) {
         progressWidth -= 33.3;
     }
-    if (progressWidth === 0) {
+    if (currentActive === 1) {
         prev.disabled = true;
     }
     progress.style.width = `${progressWidth}%`;
