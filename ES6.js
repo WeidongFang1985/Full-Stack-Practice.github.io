@@ -71,3 +71,31 @@ console.log(addAgeAttributeToPerson(15, person))
 
 // *6. && 和 ?.的应用
 // return array && array.length  === return array?.length
+
+// 7. Closure 闭包的作用 运用module的概念 达到隐藏某些数据的目的
+function createCounter() {
+    let counter = 0;
+    const increment = () => {
+        counter++;
+    };
+    const getCount = () => {
+        return counter;
+    };
+    return {
+        increment,
+        getCount,
+    };
+}
+
+const counter = createCounter();
+console.log(counter.getCount());
+counter.increment();
+counter.increment();
+console.log(counter.getCount());
+
+// 在这个例子中，用户无法访问到counter
+
+// 8. IIFEs: Immediately Invoked Function Expressions
+(() => console.log(15))();
+//立即执行该函数
+
