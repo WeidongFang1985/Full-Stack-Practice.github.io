@@ -4,16 +4,13 @@ const next = document.getElementById("next");
 const circles = document.querySelectorAll(".circle");
 
 let currentActive = 1;
-let progressWidth = 0;
+let progressWidth;
 prev.disabled = true;
 
 next.addEventListener("click", () => {
     prev.disabled = false;
     currentActive++;
-    if (currentActive <= circles.length) {
-        progressWidth += 33.3;
-    }
-
+    progressWidth = (currentActive - 1) * 100 / (circles.length - 1);
     if (currentActive > circles.length) {
         currentActive = circles.length
     }
@@ -28,11 +25,9 @@ next.addEventListener("click", () => {
 prev.addEventListener("click", () => {
     next.disabled = false;
     currentActive--;
+    progressWidth = (currentActive - 1) * 100 / (circles.length - 1);
     if (currentActive < 1) {
         currentActive = 1
-    }
-    if (currentActive > 0) {
-        progressWidth -= 33.3;
     }
     if (currentActive === 1) {
         prev.disabled = true;
