@@ -1,8 +1,8 @@
-import './Expense.css';
+import './Expenses.css';
 import ExpenseItem from "./ExpenseItem/ExpenseItem";
 import {useState} from "react";
 
-const Expense = () => {
+const Expenses = () => {
     const [title, setTitle] = useState('Origin');
 
     const updateTitle = Expense => {
@@ -18,5 +18,5 @@ const Expense = () => {
     );
 };
 
-export default Expense;
+export default Expenses;
 

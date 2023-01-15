@@ -1,12 +1,12 @@
 import './App.css';
-import ExpenseItem from "./components/ExpenseItem";
+import Expenses from "./components/Expenses/Expenses";
 
 function App() {
-  return (
-    <div className='app'>
-      <ExpenseItem />
-    </div>
-  );
+    return (
+        <div className='app'>
+            <Expenses/>
+        </div>
+    );
 }
 
 export default App;
