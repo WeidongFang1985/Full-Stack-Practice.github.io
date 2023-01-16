@@ -1,0 +1,24 @@
+图片翻转
+img:hover {
+    cursor: pointer;
+    animation: flip-horizontal 1s ease-in-out forwards;
+
+}
+
+@keyframes flip-horizontal {
+    from {transform: rotateY(0deg);}
+    to {transform: rotateY(360deg);}
+}
+
+
+
+图片放大
+img {
+    transition: all 1s ease;
+}
+
+
+img:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
