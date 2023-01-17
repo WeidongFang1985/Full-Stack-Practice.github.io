@@ -1,4 +1,4 @@
-图片翻转
+/*图片翻转*/
 img:hover {
     cursor: pointer;
     animation: flip-horizontal 1s ease-in-out forwards;
@@ -12,7 +12,7 @@ img:hover {
 
 
 
-图片放大
+/*图片放大*/
 img {
     transition: all 1s ease;
 }
@@ -21,4 +21,41 @@ img {
 img:hover {
     cursor: pointer;
     transform: scale(1.1);
+}
+
+如果想图片尺寸不变，但仍有放大效果
+可以在图片外套一个contianer(并且固定好尺寸)
+例：
+.container {
+  overflow: hidden;
+  width: 120px;
+  height: 120px;
+}
+或者 用inline-block和block来限定
+.container {
+  overflow: hidden;
+  display: inline-block;
+}
+
+img {
+  transition: all 1s ease;
+  display: block;
+}
+
+img:hover {
+  cursor: pointer;
+  transform: scale(1.3);
+}
+
+/*图片加阴影*/
+img {
+    border-radius: 20px;
+    box-shadow: 0 0 3px 2px lightslategrey;
+    transition: box-shadow 0.5s ease;
+}
+
+
+img:hover {
+    cursor: pointer;
+    box-shadow: 0 0 10px 3px #333;
 }
