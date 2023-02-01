@@ -1,6 +1,8 @@
 show dbs 显示所有数据库  
-use databaseName 跳转到某个数据库，没有该数据库时会创建新的  
-show collections 当在某个数据库中，该命令会显示所有的集合
+use databaseName 跳转到某个数据库，没有该数据库时会创建新的    
+show collections 当在某个数据库中，该命令会显示所有的集合  
+db.collectionName.drop() 删除该集合
+--------------------------------------------------    
 
 CRUD  
 --Create:
