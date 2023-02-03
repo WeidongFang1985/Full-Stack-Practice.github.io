@@ -5,18 +5,19 @@ git remote add orgin [giturl]   //为本地仓库添加远程仓库
 git remote -v //查看链接的远程仓库地址  
 git remote rm origin //删除连接的远程仓库  
 git remote origin set-url [giturl]  //修改远程仓库地址  
-git push -u origin master //关联远程master  
+git push -u origin master //关联远程master
 
 git branch //查看本地分支  
 git branch -d [branchname]  
 git branch -D [branchname]  //删除本地分支  
 git checkout [branchname]    //切换分支  
 git checkout -b feature1 //新建本地分支切换到新分支  
-
+git checkout -b branch origin/branch //在本地创建branch的同时，将远程仓库里的branch内容同步到该branch中
+---------
 git status //查看文件状态  
 git diff //查看该文件的改动情况 github desktop查看  
 git log //查看所有的commits  
-git rerlog //查看所有commits，包括版本回退的commits  
+git reflog //查看所有commits，包括版本回退的commits
 
 rebase feature1 -> master //不要站在公共分支上执行rebase操作  
 git checkout master  
@@ -24,7 +25,7 @@ git pull //local master up to date
 git checkout feature1  
 git rebase master //在feature1 branch上rebase master  
 git checkout master  
-git merge feature1 // git merge feature1  
+git merge feature1 // git merge feature1
 
 git merge feature2 //merge  
 
