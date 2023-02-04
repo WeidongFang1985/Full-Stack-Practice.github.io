@@ -12,8 +12,8 @@ git branch -d [branchname]
 git branch -D [branchname]  //删除本地分支  
 git checkout [branchname]    //切换分支  
 git checkout -b feature1 //新建本地分支切换到新分支  
-git checkout -b branch origin/branch //在本地创建branch的同时，将远程仓库里的branch内容同步到该branch中
----------
+git checkout -b branch origin/branch或git checkout --track origin/branch //在本地创建branch的同时，将远程仓库里的branch内容同步到该branch中  
+
 git status //查看文件状态  
 git diff //查看该文件的改动情况 github desktop查看  
 git log //查看所有的commits  
