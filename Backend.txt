@@ -1,0 +1,5 @@
+- check running port: lsof -i tcp:port
+lsof -i tcp:3000
+
+- close port: kill -9 PID
+kill -9 59081
