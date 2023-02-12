@@ -1,0 +1,62 @@
+body {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    background-color: darkgrey;
+}
+
+h1 {
+    padding: 0;
+}
+
+img {
+    width: 48px;
+    height: 48px;
+}
+
+#show {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    z-index: 1;
+}
+
+#hidden {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    display: none;
+    z-index: 10;
+}
+
+button {
+    width: 80px;
+    padding: 10px 0;
+}
+
+.hidden-box {
+    z-index: 5;
+    width: 50vw;
+    height: 200px;
+    background-color: dodgerblue;
+    display: flex;
+    position: absolute;
+    top: 0;
+    right: -50vw;;
+    transition: all 1s ease;
+}
+
+.hidden-box ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    color: white;
+    list-style: none;
+    font-size: 20px;
+    /*margin-left: 40px;*/
+}
+
+.active {
+    transform: translateX(-50vw);
+}

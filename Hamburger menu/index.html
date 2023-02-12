@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="icon" type="image/png" href="">
+    <meta name="description" content="">
+</head>
+<body>
+    <footer>
+        <h1>Hi</h1>
+        <h1>Hi</h1>
+        <div class="btn-box">
+            <img id="show" src="hamburger_icon.svg" alt="">
+            <img id="hidden" src="cancel_icon.svg" alt="">
+        </div>
+
+        <div id='hidden-box' class="hidden-box">
+            <ul>
+                <li>Home</li>
+                <li>Service</li>
+                <li>Contact</li>
+                <li>Phone</li>
+            </ul>
+        </div>
+    </footer>
+    <script>
+        const show = document.getElementById('show')
+        const hidden = document.getElementById('hidden')
+        const box = document.getElementById('hidden-box')
+        show.addEventListener('click',()=>{
+            box.classList.add("active")
+            show.style.display = 'none'
+            hidden.style.display = 'block'
+
+        })
+        hidden.addEventListener('click',()=>{
+            box.classList.remove("active")
+            show.style.display = 'block'
+            hidden.style.display = 'none'
+        })
+    </script>
+</body>
+</html>
