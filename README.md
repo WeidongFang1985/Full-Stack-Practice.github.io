@@ -1,17 +1,21 @@
 ### Full-Stack-Practice
 
-- Lecture 02 sample(Sign up):
+- Sample(Sign up):
 
   URL: https://weidongfang1985.github.io/Full-Stack-Practice.github.io/Lecture02%20HTML%20&%20CSS/index.html
 
-- Lecture 03 sample(Responsive Card):
+- Sample(Responsive Card):
 
   URL: https://weidongfang1985.github.io/Full-Stack-Practice.github.io/Lecture03%20HTML&CSS/index.html
 
-- Lecture 03 sample(Grid Box):
+- Sample(Grid Box):
   
   URL: https://weidongfang1985.github.io/Full-Stack-Practice.github.io/Lecture03%20HTML&CSS/Grid%20Practice/index.html
   
-- Lesson 4 progressBar:
+- Progress Bar:
 
   URL: https://weidongfang1985.github.io/Full-Stack-Practice.github.io/Lesson4/progressBar.html
+
+- Hamburger Menu:
+  
+  URL: https://weidongfang1985.github.io/Full-Stack-Practice.github.io/Hamburger%20menu/index.html
