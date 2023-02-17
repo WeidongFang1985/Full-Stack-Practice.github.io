@@ -1,0 +1,74 @@
+html {
+    font-size: 0.1389vw;
+}
+
+@media screen and (max-width: 960px){
+
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    width: 620rem;
+    display: flex;
+    justify-content: center;
+    gap: 10rem;
+    box-sizing: border-box;
+    flex-wrap: wrap;
+}
+
+.card {
+    width: 190rem;
+    box-sizing: border-box;
+}
+
+
+
+img {
+    width: 150rem;
+    height: 110rem;
+    margin-bottom: 10rem;
+}
+
+h1 {
+    font-size: 12rem;
+    margin-bottom: 10rem;
+    margin-top: 0;
+}
+
+.description {
+    width: 150rem;
+    font-size: 17rem;
+    margin-bottom: 10rem;
+    margin-top: 0;
+}
+
+.content {
+    width: 150rem;
+    font-size: 12rem;
+    margin-bottom: 10rem;
+    margin-top: 0;
+}
+
+@media screen and (max-width: 960px){
+    html {
+        font-size: 0.2380vw;
+    }
+    .container {
+        width: 380rem;
+    }
+    .card {
+        width: 170rem;
+    }
+    .description,.content{
+        width: 150rem;
+    }
+
+}
