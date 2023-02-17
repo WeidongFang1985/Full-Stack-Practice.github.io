@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width,initial-scale=1.0" name="viewport">
+    <title>Title</title>
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <link href="" rel="icon" type="image/png">
+    <meta content="" name="description">
+</head>
+<body>
+<div class="container">
+    <div class="container-title">
+        <h1>Q&A</h1>
+    </div>
+    <div class="container-card">
+        <div class="card-title">
+            <h2>Our Services</h2>
+            <div class="drop-menu">
+                <img alt="drop-down" id="drop-down" src="chevron-down-solid.svg">
+                <img alt="drop-up" id="drop-up" src="chevron-up-solid.svg">
+            </div>
+        </div>
+        <div id="card-content">
+            <ul>
+                <li><a href="#">Graphic Design</a></li>
+                <li><a href="#">Digital Marketing</a></li>
+                <li><a href="#">Advertising</a></li>
+                <li><a href="#">Web Design</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<script>
+    const down = document.getElementById("drop-down")
+    const up = document.getElementById("drop-up")
+    const content = document.getElementById("card-content")
+    down.addEventListener('click', () => {
+        content.style.display = "block";
+        down.style.display = "none";
+        up.style.display = "block";
+
+    })
+    up.addEventListener('click', () => {
+        content.style.display = "none";
+        down.style.display = "block";
+        up.style.display = "none";
+    })
+
+
+</script>
+</body>
+</html>

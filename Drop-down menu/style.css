@@ -1,0 +1,48 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+img {
+    width: 30px;
+}
+
+img:hover {
+    cursor: pointer;
+}
+
+h2 {
+    margin: 0;
+}
+
+.container {
+    width: 1200px;
+}
+
+.container-card {
+    border-bottom: 1px solid #c9c8c8;
+    padding-bottom: 20px;
+}
+
+.card-title {
+    width: 1180px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#drop-up {
+    display: none;
+}
+
+#card-content {
+    width: 1200px;
+    display: none;
+    margin: 0;
+    padding-bottom: 0;
+}
+
+#card-content p {
+    margin-bottom: 0;
+}
