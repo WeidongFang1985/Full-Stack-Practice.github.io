@@ -1,5 +1,6 @@
 安装：npm install -g typescript@latest  
 查看版本: tsc --version
+
 ----------
 使用：
 
